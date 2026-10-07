@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LunaAI - Legal Documentation</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-color: #6366f1;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    nav button {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    nav button.active, nav button:hover {
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    .doc-section {
+      background: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 2.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border-color);
+    }
+
+    h2 {
+      color: #ffffff;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #cbd5e1;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>LunaAI Documentation</h1>
+      <p class="subtitle">Effective Date: October 7, 2026</p>
+      <nav>
+        <button id="btn-privacy" class="active" onclick="showDoc('privacy')">Privacy Policy</button>
+        <button id="btn-terms" onclick="showDoc('terms')">Terms of Service</button>
+      </nav>
+    </header>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <div id="privacy" class="doc-section">
+      <h2>Privacy Policy</h2>
+      <p>This Privacy Policy explains how <strong>LunaAI</strong> ("the Bot", "we", "us", or "our") collects, uses, and stores data when you interact with our Discord application.</p>
+
+      <h3>1. Data We Collect</h3>
+      <p>To operate effectively, LunaAI collects minimal necessary information from Discord servers and users:</p>
+      <ul>
+        <li><strong>User Identifiers:</strong> Your Discord User ID, username, and avatar URL to identify you during interactions and maintain user preferences/conversations.</li>
+        <li><strong>Server & Channel Identifiers:</strong> Server (Guild) IDs and Channel IDs where LunaAI is added or used, enabling localized server settings and responses.</li>
+        <li><strong>Command & Message Content:</strong> Text inputs provided directly in commands, prompts, or messages directed at LunaAI (e.g., via slash commands or direct mentions) to process AI requests.</li>
+        <li><strong>Usage Logs:</strong> Command usage statistics, timestamps, and error logs for maintaining performance and troubleshooting.</li>
+      </ul>
+
+      <h3>2. Data We Do NOT Collect</h3>
+      <ul>
+        <li>We do <strong>not</strong> continuously read, log, or store ambient chat messages in channels where LunaAI is present unless explicitly triggered by a command or mention.</li>
+        <li>We do <strong>not</strong> collect personal payment details (all transactions are handled securely by third-party providers like Stripe or Discord App Subscriptions).</li>
+      </ul>
+
+      <h3>3. How We Use Your Data</h3>
+      <p>We use the collected information solely for the following purposes:</p>
+      <ul>
+        <li>To process AI requests and provide responses.</li>
+        <li>To store your user preferences (e.g., custom settings or thread memory).</li>
+        <li>To monitor system health, prevent abuse, and optimize bot performance.</li>
+      </ul>
+
+      <h3>4. Third-Party Data Sharing</h3>
+      <p>LunaAI relies on third-party AI APIs (such as OpenAI, Anthropic, or custom endpoints) to process user prompts. Prompts sent to LunaAI are transmitted securely to these service providers strictly for generating responses. We do not sell, rent, or trade your personal data to advertisers or third parties.</p>
+
+      <h3>5. Data Retention & Deletion</h3>
+      <ul>
+        <li><strong>Prompt Data:</strong> Conversation history and prompt memory are retained only as long as necessary to maintain contextual conversations or server configuration.</li>
+        <li><strong>Deletion Requests:</strong> You may request the deletion of your stored data at any time by contacting us through our Support Server or issuing the bot's data reset commands (if enabled). Server owners can remove all server-specific data by kicking the bot from the server.</li>
+      </ul>
+
+      <h3>6. Contact</h3>
+      <p>If you have questions or concerns regarding this Privacy Policy or wish to request data deletion, please contact us via our Discord Support Server or at <code>support@lunaai-example.com</code>.</p>
+    </div>
+
+    <!-- TERMS OF SERVICE SECTION -->
+    <div id="terms" class="doc-section hidden">
+      <h2>Terms of Service</h2>
+      <p>By inviting or using <strong>LunaAI</strong> in your Discord server, you agree to be bound by these Terms of Service. If you do not agree to these terms, please remove the bot from your server immediately.</p>
+
+      <h3>1. Eligibility & Compliance</h3>
+      <ul>
+        <li>You must comply with <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord's Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Community Guidelines</a> at all times.</li>
+        <li>You must be at least 13 years of age (or the minimum legal age required in your jurisdiction) to use LunaAI.</li>
+      </ul>
+
+      <h3>2. Acceptable Use</h3>
+      <p>You agree not to use LunaAI to:</p>
+      <ul>
+        <li>Generate, share, or encourage illegal, sexually explicit, harmful, or abusive content.</li>
+        <li>Attempt to bypass AI safety filters, system prompts, or guardrails ("jailbreaking").</li>
+        <li>Spam, overload, or execute denial-of-service (DoS) attacks against the bot or its infrastructure.</li>
+        <li>Scrape, reverse-engineer, or attempt to extract source code or underlying AI models from LunaAI.</li>
+      </ul>
+
+      <h3>3. Service Availability & Modification</h3>
+      <ul>
+        <li>LunaAI is provided on an "AS IS" and "AS AVAILABLE" basis. We do not guarantee uninterrupted, error-free operation.</li>
+        <li>We reserve the right to modify, suspend, or terminate the bot (or any feature) at any time without prior notice.</li>
+        <li>We reserve the right to terminate access or block specific users/servers from using LunaAI for violating these terms.</li>
+      </ul>
+
+      <h3>4. AI Output Disclaimer</h3>
+      <p>LunaAI generates responses using artificial intelligence. Content generated by the bot:</p>
+      <ul>
+        <li>May occasionally contain inaccuracies, errors, or outdated information.</li>
+        <li>Does <strong>not</strong> constitute professional legal, medical, financial, or formal advice.</li>
+        <li>Reflects AI predictions and does not express the personal opinions or official position of LunaAI's developers.</li>
+      </ul>
+
+      <h3>5. Limitation of Liability</h3>
+      <p>In no event shall the developers or owners of LunaAI be held liable for any damages, losses, or legal issues resulting from your use of the bot, including but not limited to data loss, server disruptions, or AI-generated output.</p>
+
+      <h3>6. Changes to Terms</h3>
+      <p>We may update these Terms of Service from time to time. Continued use of LunaAI after changes are published constitutes acceptance of the new terms.</p>
+
+      <h3>7. Contact</h3>
+      <p>For questions regarding these Terms of Service, reach out to us via our Discord Support Server or at <code>support@lunaai-example.com</code>.</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 LunaAI. Not affiliated with or endorsed by Discord Inc.</p>
+    </div>
+  </div>
+
+  <script>
+    function showDoc(type) {
+      const privacyDoc = document.getElementById('privacy');
+      const termsDoc = document.getElementById('terms');
+      const btnPrivacy = document.getElementById('btn-privacy');
+      const btnTerms = document.getElementById('btn-terms');
+
+      if (type === 'privacy') {
+        privacyDoc.classList.remove('hidden');
+        termsDoc.classList.add('hidden');
+        btnPrivacy.classList.add('active');
+        btnTerms.classList.remove('active');
+      } else {
+        termsDoc.classList.remove('hidden');
+        privacyDoc.classList.add('hidden');
+        btnTerms.classList.add('active');
+        btnPrivacy.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
